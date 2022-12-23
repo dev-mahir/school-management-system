@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+@layer base {
+  h4 {
+    @apply text-[17px] font-medium text-light_gray;
+  }
+  body {
+    @apply font-primary text-body_color text-sm dark:bg-gray-700;
+  }
+
+  input {
+    @apply px-4 py-2 w-full rounded-md outline-none  border focus:border-blue-300 text-gray-500 dark:bg-gray-700 dark:border-gray-500 dark:text-gray-200;
+  }
+  input[type="checkbox"] {
+    @apply inline-block w-auto;
+  }
+
+  textarea {
+    @apply px-4 py-2 w-full rounded-md outline-none  border focus:border-blue-300 text-gray-500 dark:bg-gray-700 dark:border-gray-500 dark:text-gray-200;
+  }
+  select {
+    @apply px-4 py-2 w-full rounded-md outline-none  border focus:border-blue-300 text-gray-500 dark:bg-gray-700 dark:border-gray-500 dark:text-gray-200;
+  }
+  label {
+    @apply block font-medium dark:text-gray-400 mb-1;
+  }
+}
+
+@layer components {
+  .title {
+    @apply text-[23px] font-semibold text-[#444];
+  }
+  .card-title {
+    @apply text-[17px] font-medium text-[#5b626b]  dark:text-gray-100;
+  }
+
+  .btn {
+    @apply duration-300 border text-sm px-6 py-[6px] font-medium rounded-[3px];
+  }
+  .btn-icon {
+    @apply flex items-center gap-x-2;
+  }
+
+.btnicon{
+  @apply px-[6px] py-[6px] rounded-sm
+}
+
+
+
+  .btn-danger {
+    @apply bg-danger border-danger text-white;
+  }
+  .btn-primary {
+    @apply bg-primary border-primary text-white;
+  }
+
+  .btn-success {
+    @apply bg-success border-success text-white;
+  }
+
+  .btn-outline-danger {
+    @apply text-danger border-danger hover:bg-danger  hover:border-danger hover:text-white;
+  }
+  .btn-outline-primary {
+    @apply text-primary border-primary hover:bg-primary hover:border-primary hover:text-white;
+  }
+  .btn-outline-success {
+    @apply text-success border-success hover:bg-success hover:border-success hover:text-white;
+  }
+
+  ._bg-gray-800 {
+    @apply bg-gray-800;
+  }
+
+  /*==================== card  ===========================*/
+
+  .card {
+    @apply rounded-md  dark:bg-gray-800;
+  }
+
+  .card-header {
+    @apply flex justify-between items-center  px-5 py-2;
+  }
+
+  /* custom class  */
+  .dashboard ._card {
+    @apply p-5 bg-white rounded-md drop-shadow-sm dark:_bg-gray-800;
+  }
+}
+
+._shadow-md {
+  box-shadow: 0 5px 25px #00000069;
+}
+._shadow-sm {
+  box-shadow: 0 5px 15px #0000002e;
+}
+
+.sidebar ul {
+  padding: 0 10px;
+}
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+.sidebar ul li .menu {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.sidebar ul li .menu.menu-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dark .sidebar ul li .menu {
+  color: white;
+}
+.sidebar ul li .menu:hover {
+  background-color: #f0f3fbac;
+}
+.sidebar ul li .menu.active {
+  background-color: #f0f3fb;
+  font-weight: 500;
+}
+
+.dark .sidebar ul li.active > .menu {
+  background-color: #374151;
+}
+
+.sidebar ul li.active .menu-btn span:nth-child(2) {
+  transform: rotate(90deg);
+}
+
+.sidebar ul li .sub-menu {
+  height: 0;
+  overflow: hidden;
+}
+
+.sidebar ul li.active .sub-menu {
+  height: auto;
+}

@@ -1,0 +1,26 @@
+
+.rc-pagination-total-text {
+    margin-right: 44px;
+}
+
+.rc-pagination-item-active {
+    background: #111;
+    border-color: #111;
+}
+li.rc-pagination-item.rc-pagination-item-1.rc-pagination-item-active a{
+    color: beige;
+}
+.rc-pagination-item {
+    background: #111;
+    border-color: #111;
+}
+.rc-pagination-item a{
+    color: rgb(143, 133, 133);
+}
+
+li.rc-pagination-prev ,
+li.rc-pagination-next{
+    border: 1px solid #ddd;
+    color: #ddd;
+    padding: 0 15px;
+}
