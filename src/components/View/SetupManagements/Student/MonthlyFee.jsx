@@ -8,7 +8,7 @@ const MonthlyFee = () => {
         <div>
 
             <ViewCardHeader
-                title="All Student"
+                title="Student Monthly Fee"
                 link="/student/exam/fee/view"
                 btnName="Exam Fee"
                 icon={<AiFillEye />}

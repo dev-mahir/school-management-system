@@ -79,6 +79,17 @@ const Sidebar = ({ sidebar }) => {
                                 <Link to="/student/monthly/fee/view" className='menu !pl-12'> Fee </Link>
                             </div>
                         </li>
+                        <li>
+                            <button onClick={handleSubMenu} className='menu w-full font-medium menu-btn'>
+                                <span className='flex gap-x-2'><AiOutlineHome />Employee Management</span>
+                                <span><FaAngleRight /></span>
+                            </button>
+                            <div className='sub-menu'>
+                                <Link to="/employee/view" className='menu !pl-12'> Employee </Link>
+                                <Link to="/student/roll/generate" className='menu !pl-12'> Roll Generate </Link>
+                                <Link to="/student/monthly/fee/view" className='menu !pl-12'> Fee </Link>
+                            </div>
+                        </li>
 
 
                     </ul>

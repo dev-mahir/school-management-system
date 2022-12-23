@@ -34,14 +34,16 @@ import AssignSubjectAndMarks from "./components/View/SetupManagements/SubjectAnd
 import Test from "./Test/Test";
 import RollGenerate from "./components/View/SetupManagements/Student/RollGenerate";
 import MonthlyFee from "./components/View/SetupManagements/Student/MonthlyFee";
+import ExamFee from "./components/View/SetupManagements/Student/ExamFee";
+import EmployeeView from "./components/View/Employee Management/EmployeeView";
+import EmployeeRegistration from "./components/View/Employee Management/EmployeeRegistration";
 
 function App() {
-  // theme mode
-  if (localStorage.isDarkMode === "true") {
+
+ 
     document.documentElement.classList.add("dark");
-  } else {
-    document.documentElement.classList.remove("dark");
-  }
+
+
 
   return (
     <>
@@ -118,7 +120,11 @@ function App() {
           <Route path="/student/registration" element={<StudentRegistration />}></Route>
           <Route path="/student/roll/generate" element={<RollGenerate />}></Route>
           <Route path="/student/monthly/fee/view" element={<MonthlyFee />}></Route>
-          <Route path="/student/exam/fee/view" element={<MonthlyFee />}></Route>
+          <Route path="/student/exam/fee/view" element={<ExamFee />}></Route>
+
+
+          <Route path="/employee/view" element={<EmployeeView />}></Route>
+          <Route path="/employee/registration" element={<EmployeeRegistration />}></Route>
 
           <Route path="*" element={<Error />}></Route>
         </Route>
