@@ -1,9 +1,9 @@
 import React from 'react';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { BiEdit, BiTrash } from 'react-icons/bi'
-import { Link } from 'react-router-dom';
-import Pagination from '../../../Pagination/Pagination'
-import ViewCardHeader from '../../../ViewCardHeader/ViewCardHeader';
+import Pagination from '../../Pagination/Pagination';
+import ViewCardHeader from '../../ViewCardHeader/ViewCardHeader';
+
 
 const StudentView = () => {
     return (
@@ -16,6 +16,7 @@ const StudentView = () => {
                 icon={<AiOutlinePlus />}
             />
 
+            
             <div className="card mt-5 p-5" >
                 <form action="">
 

@@ -1,12 +1,13 @@
 import React from 'react';
 import { AiFillEye } from 'react-icons/ai';
-import Pagination from '../../../Pagination/Pagination'
-import ViewCardHeader from '../../../ViewCardHeader/ViewCardHeader';
+import Pagination from '../../Pagination/Pagination'
+import ViewCardHeader from '../../ViewCardHeader/ViewCardHeader';
 
 const MonthlyFee = () => {
     return (
         <div>
 
+            
             <ViewCardHeader
                 title="Student Monthly Fee"
                 link="/student/exam/fee/view"

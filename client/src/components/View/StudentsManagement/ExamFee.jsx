@@ -1,19 +1,18 @@
 import React from 'react';
-import { AiOutlinePlus } from 'react-icons/ai';
-import { BiEdit, BiTrash } from 'react-icons/bi'
-import { Link } from 'react-router-dom';
-import Pagination from '../../../Pagination/Pagination'
-import ViewCardHeader from '../../../ViewCardHeader/ViewCardHeader';
+import { AiFillEye} from 'react-icons/ai';
 
-const RollGenerate = () => {
+import Pagination from '../../Pagination/Pagination'
+import ViewCardHeader from '../../ViewCardHeader/ViewCardHeader';
+
+const ExamFee = () => {
     return (
         <div>
 
             <ViewCardHeader
-                title="All Student"
-                link="/student/registration"
+                title="Exam Fee"
+                link="/student/monthly/fee/view"
                 btnName="Student Registration"
-                icon={<AiOutlinePlus />}
+                icon={<AiFillEye />}
             />
 
             <div className="card mt-5 p-5" >
@@ -32,10 +31,16 @@ const RollGenerate = () => {
                                 <option value="">One</option>
                             </select>
                         </div>
+                        <div className='w-1/5'>
+                            <label htmlFor="">Select Month</label>
+                            <select name="" id="">
+                                <option value="">January</option>
+                            </select>
+                        </div>
                         <div>
                             <button className='btn btn-primary'>Search</button>
                         </div>
-                    </div>
+                  </div>
 
                 </form>
             </div>
@@ -44,8 +49,12 @@ const RollGenerate = () => {
             <div className="card mt-4">
                 <div class="overflow-x-auto table-auto  relative  rounded-md">
                     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700  bg-gray-50 dark:bg-gray-700 dark:text-gray-300">
                             <tr>
+                                <th scope="col" class="py-3 px-6">
+                                    SL
+                                </th>
+                         
                                 <th scope="col" class="py-3 px-6">
                                     ID No
                                 </th>
@@ -53,37 +62,51 @@ const RollGenerate = () => {
                                     Student Name
                                 </th>
                                 <th scope="col" class="py-3 px-6">
-                                   Father's Name
-                                </th>
-                                <th scope="col" class="py-3 px-6">
-                                    Gender
-                                </th>
-                                <th scope="col" class="py-3 px-6">
                                     Roll No
                                 </th>
-                                
+                                <th scope="col" class="py-3 px-6">
+                                    Monthly Fee
+                                </th>
+                                <th scope="col" class="py-3 px-6">
+                                    Discount Amount
+                                </th>
+                                <th scope="col" class="py-3 px-6">
+                                    Fee
+                                </th>
+                                <th scope="col" class="py-3 px-6">
+                                    Actions
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
 
                                 <td class="py-4 px-6">
-                                    20220001
+                                    1
+                                </td>
+                                <td class="py-4 px-6">
+                                    2022001
                                 </td>
                                 <td class="py-4 px-6">
                                     Md Mahir Uddin
                                 </td>
                                 <td class="py-4 px-6">
-                                    Abu Taher Ali
+                                    01
                                 </td>
                                 <td class="py-4 px-6">
-                                   Male
+                                    2022 Tk
                                 </td>
-                                <td class="py-4 px-6 w-1/5">
-                                    <input type="text"  />
+                                <td class="py-4 px-6">
+                                   30%
                                 </td>
-                                
-                               
+                                <td class="py-4 px-6">
+                                    1850
+                                </td>
+                                <td class="py-4 px-6 ">
+                                    <div className='flex gap-x-3 items-center'>
+                                        <button className="btn btn-success  text-white"> Fee Slip </button>
+                                    </div>
+                                </td>
                             </tr>
 
 
@@ -91,8 +114,7 @@ const RollGenerate = () => {
                     </table>
 
 
-                    <div className='p-5 flex justify-between items-center'>
-                        <button className='btn btn-success'>Roll Generate</button>
+                    <div className='py-4 text-end pr-5'>
                         <Pagination />
                     </div>
 
@@ -111,7 +133,4 @@ const RollGenerate = () => {
 }
 
 
-
-
-
-export default RollGenerate
+export default ExamFee;

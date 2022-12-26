@@ -21,8 +21,8 @@ const Sidebar = ({ sidebar }) => {
     }
 
     return (
-        <div className={`sidebar ${sidebar ? "w-[280px] bg-slate-800 h-full overflow-y-auto" : "sm:w-full sm:h-full"}`}>
-            <div className=''>
+        <div className={`sidebar bg-slate-800 z-[9999] w-[250px] fixed left-0 h-screen overflow-auto duration-300 transition-all ${sidebar ? "-translate-x-[260px]" : " translate-x-0"}`}>
+            <div>
                 <div>
                     <div className="logo  pt-3 text-center border-b dark:border-gray-700  pb-[10px]">
                         <Link to="/" className='text-xl font-medium dark:text-light_white '>Aushnara High School</Link>
@@ -75,7 +75,8 @@ const Sidebar = ({ sidebar }) => {
                             <div className='sub-menu'>
                                 <Link to="/student/view" className='menu !pl-12'> View Student </Link>
                                 <Link to="/student/roll/generate" className='menu !pl-12'> Roll Generate </Link>
-                                <Link to="/student/monthly/fee/view" className='menu !pl-12'> Fee </Link>
+                                <Link to="/student/monthly/fee/view" className='menu !pl-12'> Monthly Fee </Link>
+                                <Link to="/student/registration" className='menu !pl-12'> Registration </Link>
                             </div>
                         </li>
                         <li>
@@ -121,9 +122,13 @@ const Sidebar = ({ sidebar }) => {
                                 <Link to="/reports/student/result/all" className='menu !pl-12'> Students Result </Link>
                             </div>
                         </li>
+
                     </ul>
                 </div>
+
             </div>
+
+
         </div>
     )
 }

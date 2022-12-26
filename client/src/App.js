@@ -25,16 +25,11 @@ import FeeAmountView from "./components/View/SetupManagements/Amount/FeeAmountVi
 import AddDesignation from "./components/View/SetupManagements/Designation/AddDesignation";
 import Designation from "./components/View/SetupManagements/Designation/Designation";
 import Dashboard from "./components/View/Dashboard/Dashboard";
-import StudentView from "./components/View/SetupManagements/Student/StudentView";
-import StudentRegistration from "./components/View/SetupManagements/Student/StudentRegistration";
 import AddSubject from "./components/View/SetupManagements/SubjectAndClass/AddSubject";
 import SingleClassView from "./components/View/SetupManagements/SubjectAndClass/SingleClassView";
 import SubjectAndClassView from "./components/View/SetupManagements/SubjectAndClass/SubjectAndClassView";
 import AssignSubjectAndMarks from "./components/View/SetupManagements/SubjectAndClass/AssignSubjectAndMarks";
 import Test from "./Test/Test";
-import RollGenerate from "./components/View/SetupManagements/Student/RollGenerate";
-import MonthlyFee from "./components/View/SetupManagements/Student/MonthlyFee";
-import ExamFee from "./components/View/SetupManagements/Student/ExamFee";
 import EmployeeView from "./components/View/EmployeeManagement/EmployeeView";
 import EmployeeRegistration from "./components/View/EmployeeManagement/EmployeeRegistration";
 import SingleEmployee from "./components/View/EmployeeManagement/SingleEmployee";
@@ -47,6 +42,11 @@ import GradePointAdd from "./components/View/MarksManagement/GradePointAdd";
 import StudentFee from "./components/View/AccountsManagement/StudentFee";
 import Marksheet from "./components/View/ReportsManagment/Marksheet";
 import GenerateMarksheet from "./components/View/ReportsManagment/GenerateMarksheet";
+import StudentView from "./components/View/StudentsManagement/StudentView";
+import StudentRegistration from "./components/View/StudentsManagement/StudentRegistration";
+import RollGenerate from "./components/View/StudentsManagement/RollGenerate";
+import ExamFee from "./components/View/StudentsManagement/ExamFee";
+import MonthlyFee from "./components/View/StudentsManagement/MonthlyFee";
 
 function App() {
   document.documentElement.classList.add("dark");
