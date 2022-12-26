@@ -10,30 +10,12 @@ import { change_theme_mode } from '../../redux/themeMode/action';
 const Navbar = ({ handleClick }) => {
     const dispatch = useDispatch()
 
-
-    const [theme, setTheme] = useState("light");
-
     // user state 
     const [user, setUser] = useState(false);
 
     const handleUser = () => {
         setUser(!user)
     }
-
-
-    // handle theme dark / light mode 
-    // const handleThemeMode = () => {
-    // if (localStorage.getItem('theme') === 'light') {
-    //     setTheme('dark');
-    //     localStorage.setItem('theme', 'dark');
-    // } else {
-    //     setTheme('light');
-    //     localStorage.setItem('theme', 'light');
-    // }
-
-
-    // }
-
 
 
 
@@ -69,9 +51,7 @@ const Navbar = ({ handleClick }) => {
                         </ul>
                     </div>
                 </div>
-                <div>
-                    <button className='dark:text-white' onClick={() => dispatch(change_theme_mode())}>{theme === "light" ? <BsSun /> : <BsMoon />} </button>
-                </div>
+               
             </div>
         </div>
     )

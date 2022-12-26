@@ -20,13 +20,12 @@ const Sidebar = ({ sidebar }) => {
         });
     }
 
-
     return (
-        <div className={`sidebar ${sidebar ? "w-full bg-white h-full overflow-y-auto" : "sm:w-full sm:h-full"}`}>
+        <div className={`sidebar ${sidebar ? "w-[280px] bg-slate-800 h-full overflow-y-auto" : "sm:w-full sm:h-full"}`}>
             <div className=''>
                 <div>
                     <div className="logo  pt-3 text-center border-b dark:border-gray-700  pb-[10px]">
-                        <Link to="/" className='text-2xl font-medium dark:text-light_white'>AUS</Link>
+                        <Link to="/" className='text-xl font-medium dark:text-light_white '>Aushnara High School</Link>
                     </div>
                     <div className='flex  px-3 py-3 items-center gap-x-2  border-b dark:border-gray-700  '>
                         <div className='_shadow-md inline-block rounded-md overflow-hidden'>
@@ -85,13 +84,43 @@ const Sidebar = ({ sidebar }) => {
                                 <span><FaAngleRight /></span>
                             </button>
                             <div className='sub-menu'>
-                                <Link to="/employee/view" className='menu !pl-12'> Employee </Link>
-                                <Link to="/student/roll/generate" className='menu !pl-12'> Roll Generate </Link>
-                                <Link to="/student/monthly/fee/view" className='menu !pl-12'> Fee </Link>
+                                <Link to="/employee/view" className='menu !pl-12'> Employee View</Link>
+                                <Link to="/employee/leave/view" className='menu !pl-12'> Employee Leave </Link>
                             </div>
                         </li>
 
+                        <li>
+                            <button onClick={handleSubMenu} className='menu w-full font-medium menu-btn'>
+                                <span className='flex gap-x-2'><AiOutlineHome />Marks Management</span>
+                                <span><FaAngleRight /></span>
+                            </button>
+                            <div className='sub-menu'>
+                                <Link to="/marks/marks-entry" className='menu !pl-12'> Marks Entry</Link>
+                                <Link to="/marks/marks-edit" className='menu !pl-12'> Marks Edit</Link>
+                                <Link to="/marks/grade-point/view" className='menu !pl-12'> Grade Point </Link>
+                            </div>
+                        </li>
 
+                        <li>
+                            <button onClick={handleSubMenu} className='menu w-full font-medium menu-btn'>
+                                <span className='flex gap-x-2'><AiOutlineHome />Accounts Management</span>
+                                <span><FaAngleRight /></span>
+                            </button>
+                            <div className='sub-menu'>
+                                <Link to="/accounts/student/fee/add" className='menu !pl-12'> Student Fee</Link>
+                            </div>
+                        </li>
+
+                        <li>
+                            <button onClick={handleSubMenu} className='menu w-full font-medium menu-btn'>
+                                <span className='flex gap-x-2'><AiOutlineHome />Reports Management</span>
+                                <span><FaAngleRight /></span>
+                            </button>
+                            <div className='sub-menu'>
+                                <Link to="/reports/marksheet/view" className='menu !pl-12'> Marksheet </Link>
+                                <Link to="/reports/student/result/all" className='menu !pl-12'> Students Result </Link>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>

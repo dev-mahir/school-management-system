@@ -11,10 +11,11 @@ img {
 
 @layer base {
   h4 {
-    @apply text-[17px] font-medium text-light_gray;
+    @apply text-[17px] font-medium text-light_gray ;
   }
+  
   body {
-    @apply font-primary text-body_color text-sm dark:bg-gray-700;
+    @apply font-primary text-body_color text-sm dark:bg-gray-700 overflow-x-hidden;
   }
 
   input {
@@ -44,7 +45,7 @@ img {
   }
 
   .btn {
-    @apply duration-300 border text-sm px-6 py-[6px] font-medium rounded-[3px];
+    @apply duration-300 border text-[12px] px-3 py-[6px] font-medium rounded-[3px] sm:text-sm sm:px-6;
   }
   .btn-icon {
     @apply flex items-center gap-x-2;
@@ -125,8 +126,10 @@ img {
 }
 
 .dark .sidebar ul li .menu {
-  color: white;
+  color: #e5e5e5;
 }
+
+
 .sidebar ul li .menu:hover {
   background-color: #f0f3fbac;
 }

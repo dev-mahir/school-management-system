@@ -12,14 +12,11 @@ const CardItem = () => {
                         <AiOutlineCopy className='text-2xl' />
                     </div>
                     <div>
-                        <h6 className="text-[17px] font-medium  dark:text-gray-300 ">Total Projects</h6>
+                        <h6 className="text-[17px] font-medium  dark:text-gray-300 ">Total Students</h6>
                         <span className='text-2xl font-bold  dark:text-gray-300 '>1,254</span>
                     </div>
                 </div>
 
-                <div className='mt-7'>
-                    <LineProgressBar />
-                </div>
             </div>
             <div className='_card'>
                 <div className='flex justify-between '>
@@ -32,9 +29,6 @@ const CardItem = () => {
                     </div>
                 </div>
 
-                <div className='mt-7'>
-                    <LineProgressBar />
-                </div>
             </div>
             <div className='_card'>
                 <div className='flex justify-between '>
@@ -47,9 +41,7 @@ const CardItem = () => {
                     </div>
                 </div>
 
-                <div className='mt-7'>
-                    <LineProgressBar />
-                </div>
+            
             </div>
             <div className='_card'>
                 <div className='flex justify-between '>
@@ -62,9 +54,7 @@ const CardItem = () => {
                     </div>
                 </div>
 
-                <div className='mt-7'>
-                    <LineProgressBar />
-                </div>
+               
             </div>
   
 

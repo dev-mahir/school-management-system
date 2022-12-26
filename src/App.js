@@ -35,15 +35,21 @@ import Test from "./Test/Test";
 import RollGenerate from "./components/View/SetupManagements/Student/RollGenerate";
 import MonthlyFee from "./components/View/SetupManagements/Student/MonthlyFee";
 import ExamFee from "./components/View/SetupManagements/Student/ExamFee";
-import EmployeeView from "./components/View/Employee Management/EmployeeView";
-import EmployeeRegistration from "./components/View/Employee Management/EmployeeRegistration";
+import EmployeeView from "./components/View/EmployeeManagement/EmployeeView";
+import EmployeeRegistration from "./components/View/EmployeeManagement/EmployeeRegistration";
+import SingleEmployee from "./components/View/EmployeeManagement/SingleEmployee";
+import EmployeeLeave from "./components/View/EmployeeManagement/EmployeeLeave";
+import AddEmployeeLeave from "./components/View/EmployeeManagement/AddEmployeeLeave";
+import MarksEntry from "./components/View/MarksManagement/MarksEntry";
+import MarksEdit from "./components/View/MarksManagement/MarksEdit";
+import GradePoint from "./components/View/MarksManagement/GradePoint";
+import GradePointAdd from "./components/View/MarksManagement/GradePointAdd";
+import StudentFee from "./components/View/AccountsManagement/StudentFee";
+import Marksheet from "./components/View/ReportsManagment/Marksheet";
+import GenerateMarksheet from "./components/View/ReportsManagment/GenerateMarksheet";
 
 function App() {
-
- 
-    document.documentElement.classList.add("dark");
-
-
+  document.documentElement.classList.add("dark");
 
   return (
     <>
@@ -51,9 +57,7 @@ function App() {
       <ConfirmDelete />
 
       <Routes>
-
-        <Route path='/test' element={ <Test/>}></Route>
-
+        <Route path="/test" element={<Test />}></Route>
 
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Dashboard />}></Route>
@@ -101,35 +105,73 @@ function App() {
           <Route
             path="/setup/employee/designation/add"
             element={<AddDesignation />}></Route>
-          
+
           <Route
             path="/setup/subject-and-class/view"
             element={<SubjectAndClassView />}></Route>
-          <Route
-            path="/setup/subject/add"
-            element={<AddSubject />}></Route>
+          <Route path="/setup/subject/add" element={<AddSubject />}></Route>
           <Route
             path="/setup/student/assign-subject-marks"
             element={<AssignSubjectAndMarks />}></Route>
-          
+
           <Route
             path="/setup/student/:id/view"
             element={<SingleClassView />}></Route>
 
           <Route path="/student/view" element={<StudentView />}></Route>
-          <Route path="/student/registration" element={<StudentRegistration />}></Route>
-          <Route path="/student/roll/generate" element={<RollGenerate />}></Route>
-          <Route path="/student/monthly/fee/view" element={<MonthlyFee />}></Route>
+          <Route
+            path="/student/registration"
+            element={<StudentRegistration />}></Route>
+          <Route
+            path="/student/roll/generate"
+            element={<RollGenerate />}></Route>
+          <Route
+            path="/student/monthly/fee/view"
+            element={<MonthlyFee />}></Route>
           <Route path="/student/exam/fee/view" element={<ExamFee />}></Route>
 
-
           <Route path="/employee/view" element={<EmployeeView />}></Route>
-          <Route path="/employee/registration" element={<EmployeeRegistration />}></Route>
+          <Route
+            path="/employee/registration"
+            element={<EmployeeRegistration />}></Route>
+
+          <Route
+            path="/employee/view/:name"
+            element={<SingleEmployee />}></Route>
+
+          <Route
+            path="/employee/leave/view"
+            element={<EmployeeLeave />}></Route>
+          <Route
+            path="/employee/leave/add"
+            element={<AddEmployeeLeave />}></Route>
+
+          <Route path="/marks/marks-entry" element={<MarksEntry />}></Route>
+          <Route path="/marks/marks-edit" element={<MarksEdit />}></Route>
+          <Route
+            path="/marks/grade-point/view"
+            element={<GradePoint />}></Route>
+          <Route
+            path="/marks/grade-point/add"
+            element={<GradePointAdd />}></Route>
+
+          <Route
+            path="/accounts/student/fee/add"
+            element={<StudentFee />}></Route>
+
+          <Route path="/reports/marksheet/view" element={<Marksheet />}></Route>
+
+
+          <Route path="/reports/marksheet/view/:id" element={<GenerateMarksheet />}></Route>
+
+          <Route
+            path="/reports/student/result/all"
+            element={<Marksheet />}></Route>
 
           <Route path="*" element={<Error />}></Route>
+
         </Route>
 
-        
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
       </Routes>
