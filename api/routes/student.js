@@ -1,5 +1,5 @@
 import express from 'express';
-import { getSingleStudent, registration } from '../controllers/studentController.js';
+import { getAllStudent, getSingleStudent, registration } from '../controllers/studentController.js';
 
 
 // init router 
@@ -9,7 +9,9 @@ const router = express.Router();
 // student route 
 
 router.post("/registration", registration);
+router.get("/get/all", getAllStudent);
 router.get("/:id", getSingleStudent);
+
 
 
 

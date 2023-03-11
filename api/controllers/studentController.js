@@ -8,6 +8,7 @@ import { st_class } from "../utility/st_class.js";
  * @route /api/student/registration
  * @method POST
  */
+
 export const registration = async (req, res, next) => {
   try {
     // get form data
@@ -57,9 +58,44 @@ export const registration = async (req, res, next) => {
       return next(createError(400, "Student Registration failed, try again"));
     }
   } catch (error) {
-    next(error);
+    next(createError(500, "Internal server error. Try again"));
   }
 };
+
+/**
+ * @access public
+ * @route /api/student/get/all
+ * @method GET
+ */
+export const getAllStudent = async (req, res, next) => {
+  try {
+    const page = Number(req.query.page) || 1;
+    const limit = Number(req.query.limit) || 10;
+    const skip = (page - 1) * limit;
+    const class_name = req.query.class;
+    const year = req.query.year;
+    // const roll = req.query.roll;
+
+    const students = await Student.aggregate([
+      { $match: { $and: [{ year: year }, { class_name: class_name }] } },
+      { $skip: skip },
+      { $limit: limit },
+    ]);
+    if (students.length > 0) {
+      const total_doc = await Student.countDocuments();
+      res.status(200).json({ students , total_doc});
+    } else {
+      next(createError(404, "Student not found"));
+    }
+  } catch (error) {
+    next(createError(500, "Internal server error. Try again"));
+  }
+};
+
+
+
+
+
 
 /**
  * @access public

@@ -34,10 +34,20 @@ li.rc-pagination-next {
       font-weight: 500;
     }
   }
-  .grade-table{
-    th,td{
-        padding: 5px 0;
+  .grade-table {
+    th,
+    td {
+      padding: 5px 0;
     }
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .false.open_sidebar {
+    .sidebar_hidden {
+      .sidebar {
+        display: none !important;
+      }
+    }
+  }
+}

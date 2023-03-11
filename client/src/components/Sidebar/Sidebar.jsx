@@ -7,7 +7,6 @@ import { BiMenuAltLeft } from 'react-icons/bi'
 
 const Sidebar = ({ sidebar }) => {
 
-
     const handleSubMenu = (e) => {
         const menuBtn = Array.from(
             document.getElementsByClassName('menu-btn')
@@ -20,6 +19,7 @@ const Sidebar = ({ sidebar }) => {
         });
     }
 
+    
     return (
         <div className={`sidebar bg-slate-800 z-[9999] w-[250px] fixed left-0 h-screen overflow-auto duration-300 transition-all ${sidebar ? "-translate-x-[260px]" : " translate-x-0"}`}>
             <div>
